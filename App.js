@@ -19,7 +19,8 @@ import { Container,
     Title,
     Footer,
     FooterTab,
-    TouchableOpacity
+    TouchableOpacity,
+    Text
 } from 'native-base';
 
 
@@ -37,9 +38,14 @@ export default class App extends Component<{}> {
             <Container>
                 <Header>
                     <Body>
-                    <Title>Super Hero</Title>
+                    <Title>Super Hero!!!</Title>
                     </Body>
                 </Header>
+                <Button success full rounded style={styles.donate}>
+                    <Icon name="ios-happy-outline" />
+                    <Text> Donate </Text>
+                </Button>
+
             </Container>
         );
     }
@@ -47,5 +53,12 @@ export default class App extends Component<{}> {
 }
 
 const styles = StyleSheet.create({
+    donate: {
+        margin: 10,
+        bottom: 10,
+        left: 10,
+        right: 10,
+        position: 'absolute',
 
+    },
 });
