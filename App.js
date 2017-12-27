@@ -40,7 +40,7 @@ export default class App extends Component<{}> {
             <Container>
                 <Header>
                     <Body>
-                    <Title>Super Hero!!!</Title>
+                    <Title>Super Hero</Title>
                     </Body>
                 </Header>
 
