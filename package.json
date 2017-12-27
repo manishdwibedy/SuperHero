@@ -11,6 +11,7 @@
     "native-base": "^2.3.5",
     "react": "16.0.0",
     "react-native": "0.51.0",
+    "react-native-dimension": "^1.0.6",
     "react-native-video": "^2.0.0",
     "react-native-youtube": "^1.0.1"
   },
