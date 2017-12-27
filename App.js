@@ -45,12 +45,12 @@ export default class App extends Component<{}> {
                 </Header>
 
                 <Button success full rounded style={styles.info}>
-                    <Icon name="ios-happy-outline" />
+                    <Icon name="ios-information-circle-outline" />
                     <Text> View Details </Text>
                 </Button>
 
-                <Button success full rounded style={styles.friends}>
-                    <Icon name="ios-happy-outline" />
+                <Button success full rounded iconRight="10" style={styles.friends}>
+                    <Icon name="ios-contacts" />
                     <Text> Add Friends </Text>
                 </Button>
                 <Button success full rounded style={styles.donate}>
