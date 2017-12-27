@@ -1,4 +1,7 @@
 {
   "name": "SuperHero",
-  "displayName": "SuperHero"
+  "displayName": "SuperHero",
+  "expo": {
+    "sdkVersion": "18.0.0"
+  }
 }

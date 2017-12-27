@@ -62,12 +62,12 @@ export default class App extends Component<{}> {
                        progressUpdateInterval={250.0}          // [iOS] Interval to fire onProgress (default to ~250ms)
                        style={styles.backgroundVideo} />
 
-                <Button success full rounded style={styles.info}>
+                <Button info full rounded style={styles.info}>
                     <Icon name="ios-information-circle-outline" />
                     <Text> View Details </Text>
                 </Button>
 
-                <Button success full rounded iconRight="10" style={styles.friends}>
+                <Button light full rounded iconRight="10" style={styles.friends}>
                     <Icon name="ios-contacts" />
                     <Text> Add Friends </Text>
                 </Button>
