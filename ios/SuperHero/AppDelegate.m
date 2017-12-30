@@ -11,6 +11,7 @@
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
+#import <AVFoundation/AVFoundation.h>  // import
 
 @implementation AppDelegate
 
@@ -25,6 +26,8 @@
 //  url = [url stringByAppendingString:@":8081/index.ios.bundle?platform=ios&dev=true"];
 //
 //  jsCodeLocation = [NSURL URLWithString:url];
+
+  [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:nil];  // allow
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"SuperHero"

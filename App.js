@@ -6,7 +6,8 @@
 
 import React, { Component } from 'react';
 import {
-    StyleSheet
+    StyleSheet,
+    View
 } from 'react-native';
 import { Container,
     Content,
@@ -25,15 +26,23 @@ import { Container,
     Text
 } from 'native-base';
 import Video from 'react-native-video';
+import VideoPlayer from 'react-native-video-controls';
 import { width, height, totalSize } from 'react-native-dimension';
+import Modal from 'react-native-modal'
 
+// import 'expo'
 
 export default class App extends Component<{}> {
     constructor(props) {
         super(props);
+        this.controls = VideoPlayer;
+
     }
 
+    onEnd() {
 
+        //console.log(this.refs.player);
+    }
 
     render()
     {
@@ -46,21 +55,19 @@ export default class App extends Component<{}> {
                     </Body>
                 </Header>
 
-                <Video source={require('./abc.mp4')}   // Can be a URL or a local file.
-                       ref={(ref) => {
-                           this.player = ref
-                       }}                                      // Store reference
-                       rate={1.0}                              // 0 is paused, 1 is normal.
-                       volume={1.0}                            // 0 is muted, 1 is normal.
-                       muted={false}                           // Mutes the audio entirely.
-                       paused={false}                          // Pauses playback entirely.
-                       resizeMode="cover"                      // Fill the whole screen at aspect ratio.*
-                       repeat={true}                           // Repeat forever.
-                       playInBackground={false}                // Audio continues to play when app entering background.
-                       playWhenInactive={false}                // [iOS] Video continues to play when control or notification center are shown.
-                       ignoreSilentSwitch={"ignore"}           // [iOS] ignore | obey - When 'ignore', audio will still play with the iOS hard silent switch set to silent. When 'obey', audio will toggle with the switch. When not specified, will inherit audio settings as usual.
-                       progressUpdateInterval={250.0}          // [iOS] Interval to fire onProgress (default to ~250ms)
-                       style={styles.backgroundVideo} />
+                <View style={styles.VideoWrapper}>
+                    <VideoPlayer
+                        source={require('./assets/videos/abc.mp4')}
+                        navigator={ this.props.navigator }
+                        onEnd={ this.onEnd }
+                        disableBack={ true }
+                        disableFullscreen={ true }
+                        style={{height:'88%'}}
+                        ref={ controls => this.controls = controls }
+                    />
+                </View>
+
+
 
                 <Button info full rounded style={styles.info}>
                     <Icon name="ios-information-circle-outline" />
@@ -75,7 +82,6 @@ export default class App extends Component<{}> {
                     <Icon name="ios-happy-outline" />
                     <Text> Donate </Text>
                 </Button>
-
             </Container>
         );
     }
@@ -83,10 +89,13 @@ export default class App extends Component<{}> {
 }
 
 const styles = StyleSheet.create({
-    backgroundVideo: {
+    video:{
+        height: 200
+    },
+    VideoWrapper: {
         margin: 20,
         width: width(90),
-        height: width(90)
+        height: width(90),
     },
     info: {
         margin: 10,

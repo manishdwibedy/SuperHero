@@ -1,8 +1,8 @@
 {
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 43409,
-  "expoServerNgrokUrl": "https://x5-wu9.manishdwibedy.superhero.exp.direct",
-  "packagerNgrokUrl": "https://packager.x5-wu9.manishdwibedy.superhero.exp.direct",
-  "ngrokPid": 43426
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null
 }
