@@ -63,7 +63,7 @@ export default class HomeScreen extends Component<{}> {
 
 
 
-                <Button info full rounded style={styles.info}>
+                <Button info full rounded style={styles.info}  onPress={ () => navigate('Details')}>
                     <Icon name="ios-information-circle-outline" />
                     <Text> View Details </Text>
                 </Button>

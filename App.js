@@ -10,6 +10,7 @@ import {
 import HomeScreen from "./components/HomeScreen";
 import ContactScreen from "./components/ContactScreen";
 import DonationScreen from "./components/DonationScreen";
+import DetailsScreen from "./components/DetailsScreen";
 
 
 
@@ -29,6 +30,12 @@ export const Stack = StackNavigator(
         },
         Donation: {
             screen: DonationScreen,
+            navigationOptions: ({navigation}) => ({
+                header: null,
+            }),
+        },
+        Details: {
+            screen: DetailsScreen,
             navigationOptions: ({navigation}) => ({
                 header: null,
             }),
