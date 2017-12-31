@@ -20,10 +20,12 @@ import { Container,
     Text
 } from 'native-base';
 import { NavigationActions } from 'react-navigation'
-
+var Contacts = require('react-native-contacts')
+import 'expo';
 
 export default class ContactScreen extends Component<{}> {
     render() {
+
         const { navigate } = this.props.navigation;
         const backAction = NavigationActions.back({
             key: 'HomeScreen'
@@ -44,6 +46,8 @@ export default class ContactScreen extends Component<{}> {
                     <Right>
 
                     </Right>
+
+
                 </Header>
 
 
