@@ -58,7 +58,7 @@ export default class ContactScreen extends Component<{}> {
                 <Content>
                     <H2 style={styles.headers}>Phone Contacts</H2>
 
-                    <Button block light style={styles.contactAccess}>
+                    <Button block danger style={styles.contactAccess}>
 
                         <Text>Access granted</Text>
                         <Icon name='ios-checkmark' />
@@ -68,7 +68,7 @@ export default class ContactScreen extends Component<{}> {
 
                     <H2 style={styles.headers}>Google Contacts</H2>
 
-                    <Button block light style={styles.contactAccess}>
+                    <Button block danger style={styles.googleAccess}>
 
                         <Text>Access granted</Text>
                         <Icon name='ios-checkmark' />
@@ -78,7 +78,7 @@ export default class ContactScreen extends Component<{}> {
 
                     <H2 style={styles.headers}>Facebook Contacts</H2>
 
-                    <Button block light style={styles.contactAccess}>
+                    <Button block danger style={styles.facebookAccess}>
 
                         <Text>Access granted</Text>
                         <Icon name='ios-close' />
@@ -92,7 +92,16 @@ export default class ContactScreen extends Component<{}> {
 }
 
 const styles = StyleSheet.create({
+    approved:{
+        backgroundColor: 'blue'
+    },
     contactAccess:{
+        margin: 10,
+    },
+    googleAccess:{
+        margin: 10
+    },
+    facebookAccess:{
         margin: 10
     },
     headers:{
