@@ -1,0 +1,4 @@
+
+
+Running on my phone
+react-native run-ios --device "Manish’s iPhone"
