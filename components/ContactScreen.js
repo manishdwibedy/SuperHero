@@ -21,9 +21,12 @@ import { Container,
 } from 'native-base';
 import { NavigationActions } from 'react-navigation'
 var Contacts = require('react-native-contacts')
-import 'expo';
+// import 'expo';
 
 export default class ContactScreen extends Component<{}> {
+    checkContactStatus(){
+
+    }
     render() {
 
         const { navigate } = this.props.navigation;
@@ -51,8 +54,19 @@ export default class ContactScreen extends Component<{}> {
                 </Header>
 
 
+                <Button block light style={styles.contactAccess}>
+
+                    <Text>Access to contacts</Text>
+                    <Icon name='ios-checkmark' />
+                </Button>
 
             </Container>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    contactAccess:{
+        margin: 10
+    }
+});
