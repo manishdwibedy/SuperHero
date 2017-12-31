@@ -17,7 +17,8 @@ import { Container,
     TouchableOpacity,
     Card,
     CardItem,
-    Text
+    Text,
+    H2
 } from 'native-base';
 import { NavigationActions } from 'react-navigation'
 var Contacts = require('react-native-contacts')
@@ -53,12 +54,32 @@ export default class ContactScreen extends Component<{}> {
 
                 </Header>
 
+                <Content>
+                    <H2 style={styles.headers}>Phone Contacts</H2>
 
-                <Button block light style={styles.contactAccess}>
+                    <Button block light style={styles.contactAccess}>
 
-                    <Text>Access to contacts</Text>
-                    <Icon name='ios-checkmark' />
-                </Button>
+                        <Text>Access granted</Text>
+                        <Icon name='ios-checkmark' />
+                    </Button>
+
+                    <H2 style={styles.headers}>Google Contacts</H2>
+
+                    <Button block light style={styles.contactAccess}>
+
+                        <Text>Access granted</Text>
+                        <Icon name='ios-checkmark' />
+                    </Button>
+
+                    <H2 style={styles.headers}>Facebook Contacts</H2>
+
+                    <Button block light style={styles.contactAccess}>
+
+                        <Text>Access granted</Text>
+                        <Icon name='ios-checkmark' />
+                    </Button>
+                </Content>
+
 
             </Container>
         );
@@ -67,6 +88,9 @@ export default class ContactScreen extends Component<{}> {
 
 const styles = StyleSheet.create({
     contactAccess:{
+        margin: 10
+    },
+    headers:{
         margin: 10
     }
 });
