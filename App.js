@@ -17,13 +17,15 @@ export const Stack = StackNavigator(
     {
         Home: {
             screen: HomeScreen,
-            // Optional: Override the `navigationOptions` for the screen
             navigationOptions: ({navigation}) => ({
                 header: null,
             }),
         },
         Contacts: {
-            screen: ContactScreen
+            screen: ContactScreen,
+            navigationOptions: ({navigation}) => ({
+                header: null,
+            }),
         },
 
     },

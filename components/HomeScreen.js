@@ -28,8 +28,6 @@ export default class HomeScreen extends Component<{}> {
     constructor(props) {
         super(props);
         this.controls = VideoPlayer;
-        this.navigate = this.props.navigation;
-
     }
 
     openContacts(){
@@ -42,7 +40,7 @@ export default class HomeScreen extends Component<{}> {
 
     render()
     {
-
+        const { navigate } = this.props.navigation;
         return (
             <Container>
                 <Header>
@@ -65,12 +63,12 @@ export default class HomeScreen extends Component<{}> {
 
 
 
-                <Button info full rounded style={styles.info} onPress={ this.openContacts }>
+                <Button info full rounded style={styles.info}>
                     <Icon name="ios-information-circle-outline" />
                     <Text> View Details </Text>
                 </Button>
 
-                <Button light full rounded iconRight="10" style={styles.friends}>
+                <Button light full rounded iconRight="10" style={styles.friends} onPress={ () => navigate('Contacts')}>
                     <Icon name="ios-contacts" />
                     <Text> Add Friends </Text>
                 </Button>
