@@ -20,8 +20,9 @@ import { Container,
     Text,
     H2
 } from 'native-base';
-import { NavigationActions } from 'react-navigation'
+import { NavigationActions } from 'react-navigation';
 var Contacts = require('react-native-contacts')
+
 // import 'expo';
 
 export default class ContactScreen extends Component<{}> {
@@ -63,6 +64,8 @@ export default class ContactScreen extends Component<{}> {
                         <Icon name='ios-checkmark' />
                     </Button>
 
+                    <View style={ styles.hr}/>
+
                     <H2 style={styles.headers}>Google Contacts</H2>
 
                     <Button block light style={styles.contactAccess}>
@@ -71,12 +74,14 @@ export default class ContactScreen extends Component<{}> {
                         <Icon name='ios-checkmark' />
                     </Button>
 
+                    <View style={ styles.hr}/>
+
                     <H2 style={styles.headers}>Facebook Contacts</H2>
 
                     <Button block light style={styles.contactAccess}>
 
                         <Text>Access granted</Text>
-                        <Icon name='ios-checkmark' />
+                        <Icon name='ios-close' />
                     </Button>
                 </Content>
 
@@ -92,5 +97,10 @@ const styles = StyleSheet.create({
     },
     headers:{
         margin: 10
+    },
+    hr:{
+        borderBottomColor: 'black',
+        borderBottomWidth: 1,
+        margin: 20
     }
 });
