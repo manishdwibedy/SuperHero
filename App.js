@@ -69,7 +69,7 @@ export default class App extends Component<{}> {
 
 
 
-                <Button info full rounded style={styles.info}>
+                <Button info full rounded style={styles.info} onPress={() => this.props.navigation.navigate("Chat")}>
                     <Icon name="ios-information-circle-outline" />
                     <Text> View Details </Text>
                 </Button>

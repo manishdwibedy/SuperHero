@@ -1,0 +1,20 @@
+Important
+
+1. Navigation
+    - contacts page
+    - payment page
+    - info page
+2. Contacts
+    - Google
+    - Facebook
+    - Phone book
+3. Payment
+    - Google pay
+    - Apple pay
+    - Paypal
+    - Credit cards
+
+
+Bugs
+1. Reset video after ending
+2. Stop autoplay
