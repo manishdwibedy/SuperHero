@@ -72,7 +72,7 @@ export default class HomeScreen extends Component<{}> {
                     <Icon name="ios-contacts" />
                     <Text> Add Friends </Text>
                 </Button>
-                <Button success full rounded style={styles.donate}>
+                <Button success full rounded style={styles.donate} onPress={ () => navigate('Donation')}>
                     <Icon name="ios-happy-outline" />
                     <Text> Donate </Text>
                 </Button>

@@ -9,8 +9,8 @@ import {
 } from 'react-navigation';
 import HomeScreen from "./components/HomeScreen";
 import ContactScreen from "./components/ContactScreen";
+import DonationScreen from "./components/DonationScreen";
 
-// import 'expo'
 
 
 export const Stack = StackNavigator(
@@ -27,6 +27,12 @@ export const Stack = StackNavigator(
                 header: null,
             }),
         },
+        Donation: {
+            screen: DonationScreen,
+            navigationOptions: ({navigation}) => ({
+                header: null,
+            }),
+        }
 
     },
     {
