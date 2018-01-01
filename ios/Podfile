@@ -6,8 +6,6 @@ target 'SuperHero' do
   # use_frameworks!
 
   # Pods for SuperHero
-  pod 'Firebase/Core'
-  pod 'Firebase/Database'
   target 'SuperHero-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
