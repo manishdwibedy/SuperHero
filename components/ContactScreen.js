@@ -43,7 +43,7 @@ export default class ContactScreen extends Component<{}> {
         chars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
         other = chars;
 
-        results = [];
+        // results = {};
         denied = false;
         for (i = 0; i < 26; i++) {
             filter = chars[i]
@@ -51,14 +51,39 @@ export default class ContactScreen extends Component<{}> {
                 if(err === 'denied'){
                     denied = true;
                 } else {
+                    for(i=0; i<contacts.length;i++){
+                        contact = contacts[i];
 
-                    results.push.apply(results, contacts);
+                        if (contact.phoneNumbers && contact.phoneNumbers.length > 0){
+                            var person = {
+                                firstName:contact.givenName,
+                                lastName:contact.familyName,
+                                hasThumbnail: contact.hasThumbnail,
+                                company: contact.company,
+                                phoneNumbers: contact.phoneNumbers,
+
+                            };
+                            // results[String(contact.recordID)] = person;
+                            //console.log(person);
+                            try {
+                                AsyncStorage.setItem(contact.recordID, person);
+                            } catch (error) {
+                                // Error saving data
+                            }
+                        }
+                    }
 
                 }
             })
         }
+        // console.log('iterative...11');
+        // for (recordID in results) {
+        //     // check if the property/key is defined in the object itself, not in parent
+        //     if (results.hasOwnProperty(recordID)) {
+        //         console.log(recordID, results[recordID]);
+        //     }
+        // }
 
-    console.log(results);
     };
 
     checkContactStatus(){
