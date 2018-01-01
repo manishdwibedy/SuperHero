@@ -41,7 +41,6 @@ export default class ContactScreen extends Component<{}> {
     async fetchAllContacts(){
         console.log('bbbb');
         chars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-        // chars = ['a', 'b', 'c', 'd', 'e'];
         other = chars;
 
         results = [];
@@ -57,24 +56,6 @@ export default class ContactScreen extends Component<{}> {
 
                 }
             })
-            // if (denied){
-            //     break;
-            // }
-            // for (j= 0; j < 26; j++) {
-            //     if (denied){
-            //         break;
-            //     }
-            //     filter = chars[i] + chars[j]
-            //     Contacts.getContactsMatchingString(filter, (err, contacts) => {
-            //         if(err === 'denied'){
-            //             denied = true;
-            //         } else {
-            //
-            //             results.push.apply(results, contacts);
-            //
-            //         }
-            //     })
-            // }
         }
 
     console.log(results);
