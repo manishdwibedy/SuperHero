@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {
     StyleSheet,
-    View
+    View,
+    AsyncStorage
 } from 'react-native';
 import { Container,
     Content,
@@ -46,7 +47,12 @@ export default class ContactScreen extends Component<{}> {
         // results = {};
         denied = false;
         for (i = 0; i < 26; i++) {
-            filter = chars[i]
+            filter = chars[i];
+
+            if (this.state.phoneAuth == 'Access granted'){
+                break;
+            }
+            console.log('getting contacts');
             Contacts.getContactsMatchingString(filter, (err, contacts) => {
                 if(err === 'denied'){
                     denied = true;
@@ -66,7 +72,7 @@ export default class ContactScreen extends Component<{}> {
                             // results[String(contact.recordID)] = person;
                             //console.log(person);
                             try {
-                                AsyncStorage.setItem(contact.recordID, person);
+                                AsyncStorage.setItem(contact.recordID, JSON.stringify(person));
                             } catch (error) {
                                 // Error saving data
                             }
@@ -76,14 +82,16 @@ export default class ContactScreen extends Component<{}> {
                 }
             })
         }
-        // console.log('iterative...11');
-        // for (recordID in results) {
-        //     // check if the property/key is defined in the object itself, not in parent
-        //     if (results.hasOwnProperty(recordID)) {
-        //         console.log(recordID, results[recordID]);
-        //     }
-        // }
 
+        console.log('got the contacts...');
+        // AsyncStorage.getAllKeys().then( recordIDList => {
+        //     //console.log(recordIDList);
+        //     recordIDList.forEach( recordID => {
+        //
+        //         AsyncStorage.getItem(recordID)
+        //             .then( contact => console.log(JSON.parse(contact)));
+        //     });
+        // });
     };
 
     checkContactStatus(){
@@ -99,6 +107,7 @@ export default class ContactScreen extends Component<{}> {
                     else{
                         if(permission === 'authorized'){
                             this.fetchAllContacts();
+                            console.log('105');
                             this.setState({
                                 phoneAuth: 'Access granted'
                             });
@@ -112,6 +121,7 @@ export default class ContactScreen extends Component<{}> {
                 })
             }
             if(permission === 'authorized'){
+                console.log('119');
                 this.fetchAllContacts();
                 this.setState({
                     phoneAuth: 'Access granted'
