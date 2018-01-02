@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {
     StyleSheet,
     View,
-    AsyncStorage
+    AsyncStorage,
+    FlatList
 } from 'react-native';
 import { Container,
     Content,
@@ -19,7 +20,10 @@ import { Container,
     Card,
     CardItem,
     Text,
-    H2
+    H2,
+    SwipeRow,
+    List,
+    ListItem
 } from 'native-base';
 import { NavigationActions } from 'react-navigation';
 var Contacts = require('react-native-contacts')
@@ -34,8 +38,55 @@ export default class ContactScreen extends Component<{}> {
 
         this.aa = this;
         this.state = {
-            phoneAuth: 'Access pending'
+            contactAccess: 'pending',
+            contacts: []
         };
+
+
+        AsyncStorage.setItem('contactAccess', 'granted');
+        AsyncStorage.getItem('contactAccess').then( status => {
+            this.setState({
+                contactAccess: status
+            });
+
+            if (status == 'granted'){
+                AsyncStorage.getAllKeys().then( recordIDList => {
+                    // console.log(recordIDList);
+
+                    i = 0;
+                    contactList = [];
+                    recordIDList.forEach( key => {
+                        if (key.slice(0,8) == "CONTACT:"){
+                            recordID = key;
+
+
+                            AsyncStorage.getItem(recordID)
+                                .then( contact => {
+                                    i += 1
+                                    if (contactList.length < 50) {
+                                        contact = JSON.parse(contact);
+                                        contact['key'] = i;
+                                        contactList.push(contact);
+                                    }
+
+                                });
+                        }
+
+                    });
+
+                    this.setState({
+                        contacts: contactList
+                    });
+                    console.log('should reload...')
+                    console.log(contactList);
+                });
+            }
+        });
+
+
+        console.log(this.state.contactAccess);
+
+
     }
 
     // fetchAllContacts  = (event) =>{
@@ -49,7 +100,7 @@ export default class ContactScreen extends Component<{}> {
         for (i = 0; i < 26; i++) {
             filter = chars[i];
 
-            if (this.state.phoneAuth == 'Access granted'){
+            if (this.state.contactAccess == 'granted'){
                 break;
             }
             console.log('getting contacts');
@@ -72,7 +123,7 @@ export default class ContactScreen extends Component<{}> {
                             // results[String(contact.recordID)] = person;
                             //console.log(person);
                             try {
-                                AsyncStorage.setItem(contact.recordID, JSON.stringify(person));
+                                AsyncStorage.setItem("CONTACT:"+contact.recordID, JSON.stringify(person));
                             } catch (error) {
                                 // Error saving data
                             }
@@ -84,14 +135,7 @@ export default class ContactScreen extends Component<{}> {
         }
 
         console.log('got the contacts...');
-        // AsyncStorage.getAllKeys().then( recordIDList => {
-        //     //console.log(recordIDList);
-        //     recordIDList.forEach( recordID => {
-        //
-        //         AsyncStorage.getItem(recordID)
-        //             .then( contact => console.log(JSON.parse(contact)));
-        //     });
-        // });
+
     };
 
     checkContactStatus(){
@@ -109,12 +153,13 @@ export default class ContactScreen extends Component<{}> {
                             this.fetchAllContacts();
                             console.log('105');
                             this.setState({
-                                phoneAuth: 'Access granted'
+                                contactAccess: 'granted'
                             });
+                            AsyncStorage.setItem('contactAccess', 'granted');
                         }
                         if(permission === 'denied'){
                             this.setState({
-                                phoneAuth: 'Access denied'
+                                contactAccess: 'denied'
                             });
                         }
                     }
@@ -124,13 +169,15 @@ export default class ContactScreen extends Component<{}> {
                 console.log('119');
                 this.fetchAllContacts();
                 this.setState({
-                    phoneAuth: 'Access granted'
+                    contactAccess: 'granted'
                 });
+                AsyncStorage.setItem('contactAccess', 'granted');
             }
             if(permission === 'denied'){
                 this.setState({
-                    phoneAuth: 'Access denied'
+                    contactAccess: 'denied'
                 });
+                AsyncStorage.setItem('contactAccess', 'denied');
             }
         })
     }
@@ -190,6 +237,13 @@ export default class ContactScreen extends Component<{}> {
                         <Text>Access granted</Text>
                         <Icon name='ios-close' />
                     </Button>
+
+                    <FlatList
+                        data={
+                            this.state.contacts
+                        }
+                        renderItem={({item}) => <Text>{item.firstName} {item.lastName}</Text>}
+                    />
                 </Content>
 
 
@@ -218,5 +272,8 @@ const styles = StyleSheet.create({
         borderBottomColor: 'black',
         borderBottomWidth: 1,
         margin: 20
+    },
+    contact:{
+        margin: 5
     }
 });
