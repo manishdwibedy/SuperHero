@@ -17,7 +17,11 @@ import { Container,
     TouchableOpacity,
     Card,
     CardItem,
+    Form,
+    Item,
     Text,
+    Input,
+    Label,
     H2
 } from 'native-base';
 import { NavigationActions } from 'react-navigation';
@@ -26,6 +30,11 @@ export default class DonationScreen extends Component<{}> {
     checkContactStatus(){
 
     }
+
+    do(){
+        console.log('doing...');
+    }
+
     render() {
 
         const { navigate } = this.props.navigation;
@@ -52,12 +61,29 @@ export default class DonationScreen extends Component<{}> {
 
                 </Header>
 
+                <Content>
+                    <Form>
+                        <Item floatingLabel>
+                            <Label>Username</Label>
+                            <Input />
+                        </Item>
+                        <Item floatingLabel>
+                            <Label>Password</Label>
+                            <Input />
+                        </Item>
+                    </Form>
 
+                    <Button block success onPress={ this.do } style={styles.button}>
+                        <Text>Submit</Text>
+                    </Button>
+                </Content>
             </Container>
         );
     }
 }
 
 const styles = StyleSheet.create({
-
+    button:{
+        margin: 15
+    }
 });

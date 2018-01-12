@@ -22,24 +22,75 @@ import { Container,
     Text,
     H2,
     SwipeRow,
-    List,
-    ListItem
+    List
 } from 'native-base';
 import { NavigationActions } from 'react-navigation';
 var Contacts = require('react-native-contacts')
+import { LargeList } from "react-native-largelist";
+//import Perf from 'react-addons-perf'; // ES6
+import {OptimizedFlatList} from 'react-native-optimized-flatlist'
 
 // import 'expo';
 
+const listItemHeight = 48;
+
+const listData =  [
+    {"id":"210fa414-ed54-4836-98ac-b136828f1be2","firstName":"Alicea","lastName":"Skea", "firstName":"Alicea","lastName":"Skea"},
+    {"id":"5ccf0ca3-720b-4a18-8eac-43cb2543565a","firstName":"Rubin","lastName":"Dulson","firstName":"Alicea","lastName":"Skea"},
+    {"id":"e7f20eb2-4c30-4266-afba-7287fd2240e9","firstName":"Delaney","lastName":"Fishbie","firstName":"Alicea","lastName":"Skea"},
+    {"id":"a9154238-5fc3-4982-a2cc-8208ed76e337","firstName":"Crichton","lastName":"Piggott","firstName":"Alicea","lastName":"Skea"},
+    {"id":"19f60df5-b821-4f14-a951-aef3a9d2ee33","firstName":"Tibold","lastName":"Zannuto"},
+    {"id":"f4181354-516f-4219-9bae-38245a1376f4","firstName":"Darleen","lastName":"Innott"},
+    {"id":"d8a62f7d-5c8e-4c62-994e-cca2392426b6","firstName":"Eleonora","lastName":"Hancill"},
+    {"id":"e0ea432b-ef54-4f7e-b8f7-3517d261ccaa","firstName":"Clarissa","lastName":"Trimble"},
+    {"id":"132fdd4e-0e6c-4709-adf5-3f80f7ebc83a","firstName":"Daphne","lastName":"Biggans"},
+    ];
+
+class ListItem extends React.PureComponent {
+    render() {
+        return (
+
+                <Text style={{ flex: 1 }}>
+                    {this.props.firstName} {this.props.lastName}
+                </Text>
+
+        );
+    }
+}
+
+
 export default class ContactScreen extends Component<{}> {
+    color;
+    minCellHeight = 24;
+    maxCellHeight = 48;
+    minSectionHeight = 48;
+    maxSectionHeight = 96;
+    refreshing = false;
+    largeList: LargeList;
+
+    handleItemPress = (id) => {
+        this.setState({
+            checkedLookup: {
+                ...this.state.checkedLookup,
+                [id]: !this.state.checkedLookup[id],
+            },
+        });
+    }
+
     constructor(props) {
         super(props);
         this.fetchAllContacts = this.fetchAllContacts.bind(this);
         this.checkContactStatus = this.checkContactStatus.bind(this);
+        this.renderItem = this.renderItem.bind(this);
 
+        console.log(listData);
         this.aa = this;
         this.state = {
+            d: listData,
+            checkedLookup: {},
             contactAccess: 'pending',
-            contacts: []
+            contacts: [],
+            refreshing: false
         };
 
 
@@ -63,9 +114,9 @@ export default class ContactScreen extends Component<{}> {
                             AsyncStorage.getItem(recordID)
                                 .then( contact => {
                                     i += 1
-                                    if (contactList.length < 50) {
+                                    if (contactList.length < 20) {
                                         contact = JSON.parse(contact);
-                                        contact['key'] = i;
+                                        contact['id'] = String(i);
                                         contactList.push(contact);
                                     }
 
@@ -77,8 +128,8 @@ export default class ContactScreen extends Component<{}> {
                     this.setState({
                         contacts: contactList
                     });
-                    console.log('should reload...')
-                    console.log(contactList);
+                    console.log('should reload...');
+                    console.log(this.state.contacts);
                 });
             }
         });
@@ -238,16 +289,79 @@ export default class ContactScreen extends Component<{}> {
                         <Icon name='ios-close' />
                     </Button>
 
+                    <OptimizedFlatList
+                        data={this.state.d}
+                        extraData={this.state.checkedLookup}
+                        getItemLayout={this.getItemLayout}
+                        renderItem={this.renderItem1}
+                        keyExtractor={x => x.id}
+                    />
+
                     <FlatList
-                        data={
-                            this.state.contacts
-                        }
-                        renderItem={({item}) => <Text>{item.firstName} {item.lastName}</Text>}
+                        data={this.state.contacts}
+                        getItemLayout={this.getItemLayout}
+                        renderItem={this.renderItem1}
+                        keyExtractor={x => x.id}
+                    />
+
+                    <LargeList
+                        style={{ flex: 1 }}
+                        numberOfSections ={() => 1}
+                        numberOfRowsInSection={() => this.state.contacts.length}
+                        heightForCell={() => 88}
+                        onRefresh={()=>{
+                            this.setState({refreshing:true});
+                            setTimeout(()=>this.setState({refreshing:false}),2000);
+                        }}
+                        refreshing={this.state.refreshing}
+                        renderCell={this.renderItem.bind(this)}
                     />
                 </Content>
 
 
             </Container>
+        );
+    }
+
+    getItemLayout = (data, index) => {
+        return {
+            length: listItemHeight,
+            offset: index*listItemHeight,
+            index,
+        };
+    }
+
+    renderItem1 = (rowData) => {
+        return (
+            <ListItem
+                id={rowData.item.id}
+                firstName={rowData.item.firstName}
+                lastName={rowData.item.lastName}
+                onTouch={this.handleItemPress}
+            />
+        );
+    }
+
+    renderItem(section: number, row: number) {
+        console.log('render row...');
+        let contact = this.state.contacts[row];
+        return (
+            <View style={{ flex: 1 }}>
+                <View style={{ flex: 1, flexDirection: "row", alignItems: "center" }}>
+                    <Icon name='home' />
+
+                    <View style={{marginLeft:4}}>
+                        <Text style={{ fontSize: 18 }}>
+                            {contact.firstName}
+                        </Text>
+                        <contact style={{ fontSize: 14, marginTop: 8 }}>
+                            {contact.lastName}
+                        </contact>
+                    </View>
+                </View>
+                {row < contact.length - 1 &&
+                <View style={{ backgroundColor: "#EEE", height: 1, marginLeft:16 }} />}
+            </View>
         );
     }
 }
