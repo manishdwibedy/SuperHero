@@ -24,6 +24,7 @@
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		1940F65E4EC547059E72A927 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF4CB8AE30FF44E2A0E4EDF6 /* SimpleLineIcons.ttf */; };
 		19BD3FC746E34218BAD1C06F /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0352FB7D81F04C79937692E1 /* EvilIcons.ttf */; };
+		2C548CDF91FD80FD2C2B3D42 /* Pods_SuperHeroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383F403D41DF90046387F8F6 /* Pods_SuperHeroTests.framework */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -37,10 +38,8 @@
 		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* SuperHeroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SuperHeroTests.m */; };
 		35CAEFA5EF0A4B199178A803 /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 019104E3A23A47C0A53EFF3B /* Roboto.ttf */; };
-		3C856437913A99E36121F3D4 /* libPods-SuperHeroTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9EB4906D775DFD4EA7D3ABD /* libPods-SuperHeroTests.a */; };
 		5087CC4844DC409C9DE9F6AD /* libRCTContacts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAE82C979A14D8B81CB0B7A /* libRCTContacts.a */; };
-		5B1B66791FF9FA4400DF8E64 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B1B66501FF9FA4400DF8E64 /* GoogleService-Info.plist */; };
-		5B1B667A1FF9FA4400DF8E64 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B1B66501FF9FA4400DF8E64 /* GoogleService-Info.plist */; };
+		5BFB48122009824C00EA44A9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BFB48112009824C00EA44A9 /* GoogleService-Info.plist */; };
 		5D77229B20A940D9AFC5B873 /* libRCTYouTube.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A22CD3E9AD84E318579F391 /* libRCTYouTube.a */; };
 		5E10BE537EC34E07BE590EAF /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8A4B34A7F84455FBC8AC56A /* libRNVectorIcons.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
@@ -48,16 +47,17 @@
 		66B870E407364F78AE2C2BE3 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 044D0AF3462E45C28B68FC0C /* FontAwesome.ttf */; };
 		734C6F6C8907F67EB8668254 /* libPods-SuperHero-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D4167B36D1DDAF90635EB75 /* libPods-SuperHero-tvOS.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		90362B8570FBC54D14008D42 /* libPods-SuperHero.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15398077D9B6246C69B9259B /* libPods-SuperHero.a */; };
 		9A10C0C2E4C5413BB7DE5436 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B91CE8E3237E4F3EB3DA63F7 /* Zocial.ttf */; };
 		A4AA9DAFCDE84A62A6341F90 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7E36A0DCC964232A16CCC57 /* MaterialIcons.ttf */; };
 		A76C7BAE8F3941A6836EE99C /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1B04947AD334B999779C000 /* Foundation.ttf */; };
 		A93F0BE696814056B4AB8EDD /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37916C04BD4E42C0A9B3F721 /* Octicons.ttf */; };
-		AB5A25E18D2F3EF2EDD06C99 /* libPods-SuperHero-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC5027FCBA85884E37387CE /* libPods-SuperHero-tvOSTests.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		C515FA32DE444D1A91F58B43 /* libRNFirebase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D07DDC77329C4E128DACC4D5 /* libRNFirebase.a */; };
 		CA354BBD036041CDB09161FF /* Roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A6903312A144F9F8EAAAFC0 /* Roboto_medium.ttf */; };
+		DA8B14928B7FF3FF1C420BA7 /* Pods_SuperHero_tvOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 481E79B5B4CB23FCBE3B8838 /* Pods_SuperHero_tvOSTests.framework */; };
 		DEE134B1DFB04DAB825516C9 /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 643A7C6F8D1A471B92B8FAF5 /* rubicon-icon-font.ttf */; };
 		E9598200AFD2412291503DCF /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6361BFE1F03A43AEB7D3374E /* Entypo.ttf */; };
+		F429230D5632EEF3D2D11F04 /* Pods_SuperHero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75554E9C51CD517A8AA738A1 /* Pods_SuperHero.framework */; };
 		FF7251D1DF0945329E888A04 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBF4133737EA450585EC9B03 /* Ionicons.ttf */; };
 /* End PBXBuildFile section */
 
@@ -321,6 +321,13 @@
 			remoteGlobalIDString = 5DBEB1501B18CEA900B34395;
 			remoteInfo = RNVectorIcons;
 		};
+		5BFB480F200981DF00EA44A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACD3265771CA4E22B722F882 /* RNFirebase.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNFirebase;
+		};
 		5E9157321DD0AC6500FF2AA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
@@ -384,37 +391,39 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SuperHero/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SuperHero/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		15398077D9B6246C69B9259B /* libPods-SuperHero.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SuperHero.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E47B1E0B4A5D006451C7 /* SuperHero-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SuperHero-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* SuperHero-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SuperHero-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D0828824567426C82774891 /* RCTContacts.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTContacts.xcodeproj; path = "../node_modules/react-native-contacts/ios/RCTContacts.xcodeproj"; sourceTree = "<group>"; };
 		37916C04BD4E42C0A9B3F721 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		383F403D41DF90046387F8F6 /* Pods_SuperHeroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperHeroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A6903312A144F9F8EAAAFC0 /* Roboto_medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto_medium.ttf; path = "../node_modules/native-base/Fonts/Roboto_medium.ttf"; sourceTree = "<group>"; };
 		3AAE82C979A14D8B81CB0B7A /* libRCTContacts.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTContacts.a; sourceTree = "<group>"; };
 		3B498DA489E221BC23F07E44 /* Pods-SuperHero-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHero-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHero-tvOSTests/Pods-SuperHero-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		5B1B66501FF9FA4400DF8E64 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "SuperHero/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		481E79B5B4CB23FCBE3B8838 /* Pods_SuperHero_tvOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperHero_tvOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BFB48112009824C00EA44A9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		6361BFE1F03A43AEB7D3374E /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/native-base/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		643A7C6F8D1A471B92B8FAF5 /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; };
 		68E0C6EF3600451884BB9170 /* RCTYouTube.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTYouTube.xcodeproj; path = "../node_modules/react-native-youtube/RCTYouTube.xcodeproj"; sourceTree = "<group>"; };
 		6A642A7DE41549C099B6FC30 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/@expo/vector-icons/vendor/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
+		75554E9C51CD517A8AA738A1 /* Pods_SuperHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		8969B07A43A1415EA369699D /* RCTVideo.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTVideo.xcodeproj; path = "../node_modules/react-native-video/ios/RCTVideo.xcodeproj"; sourceTree = "<group>"; };
 		8A22CD3E9AD84E318579F391 /* libRCTYouTube.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTYouTube.a; sourceTree = "<group>"; };
 		9D2484DE4D93D56A75E86E47 /* Pods-SuperHero-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHero-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHero-tvOS/Pods-SuperHero-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		A14C6F7509E2646D64B2F9CB /* Pods-SuperHeroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHeroTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHeroTests/Pods-SuperHeroTests.release.xcconfig"; sourceTree = "<group>"; };
+		ACD3265771CA4E22B722F882 /* RNFirebase.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNFirebase.xcodeproj; path = "../node_modules/react-native-firebase/ios/RNFirebase.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		B1B04947AD334B999779C000 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		B7E36A0DCC964232A16CCC57 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		B91CE8E3237E4F3EB3DA63F7 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		C5803B73BBE1AE14FA3C6E84 /* Pods-SuperHeroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHeroTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHeroTests/Pods-SuperHeroTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D07DDC77329C4E128DACC4D5 /* libRNFirebase.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNFirebase.a; sourceTree = "<group>"; };
 		DBF4133737EA450585EC9B03 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		DF4CB8AE30FF44E2A0E4EDF6 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		E10F41BBB1A3EE24FD30F890 /* Pods-SuperHero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHero.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHero/Pods-SuperHero.release.xcconfig"; sourceTree = "<group>"; };
 		E8A4B34A7F84455FBC8AC56A /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
-		E9EB4906D775DFD4EA7D3ABD /* libPods-SuperHeroTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SuperHeroTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EEC5027FCBA85884E37387CE /* libPods-SuperHero-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SuperHero-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0996FAE27CC87D5C354571 /* Pods-SuperHero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHero.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHero/Pods-SuperHero.debug.xcconfig"; sourceTree = "<group>"; };
 		FB8F4FD8E29F3B2863AD8523 /* Pods-SuperHero-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHero-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperHero-tvOSTests/Pods-SuperHero-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -425,7 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
-				3C856437913A99E36121F3D4 /* libPods-SuperHeroTests.a in Frameworks */,
+				2C548CDF91FD80FD2C2B3D42 /* Pods_SuperHeroTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,7 +459,8 @@
 				637B574537AE4763BB256CFC /* libRCTVideo.a in Frameworks */,
 				5D77229B20A940D9AFC5B873 /* libRCTYouTube.a in Frameworks */,
 				5087CC4844DC409C9DE9F6AD /* libRCTContacts.a in Frameworks */,
-				90362B8570FBC54D14008D42 /* libPods-SuperHero.a in Frameworks */,
+				C515FA32DE444D1A91F58B43 /* libRNFirebase.a in Frameworks */,
+				F429230D5632EEF3D2D11F04 /* Pods_SuperHero.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,7 +484,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB5A25E18D2F3EF2EDD06C99 /* libPods-SuperHero-tvOSTests.a in Frameworks */,
+				DA8B14928B7FF3FF1C420BA7 /* Pods_SuperHero_tvOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,7 +573,7 @@
 		13B07FAE1A68108700A75B9A /* SuperHero */ = {
 			isa = PBXGroup;
 			children = (
-				5B1B66501FF9FA4400DF8E64 /* GoogleService-Info.plist */,
+				5BFB48112009824C00EA44A9 /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -599,10 +609,10 @@
 		3E817406B5B0C1B72AFE0FD8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				15398077D9B6246C69B9259B /* libPods-SuperHero.a */,
 				0D4167B36D1DDAF90635EB75 /* libPods-SuperHero-tvOS.a */,
-				EEC5027FCBA85884E37387CE /* libPods-SuperHero-tvOSTests.a */,
-				E9EB4906D775DFD4EA7D3ABD /* libPods-SuperHeroTests.a */,
+				75554E9C51CD517A8AA738A1 /* Pods_SuperHero.framework */,
+				481E79B5B4CB23FCBE3B8838 /* Pods_SuperHero_tvOSTests.framework */,
+				383F403D41DF90046387F8F6 /* Pods_SuperHeroTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -645,6 +655,7 @@
 				0272AA96D00742E9B593BEFF /* libRCTVideo.a */,
 				8A22CD3E9AD84E318579F391 /* libRCTYouTube.a */,
 				3AAE82C979A14D8B81CB0B7A /* libRCTContacts.a */,
+				D07DDC77329C4E128DACC4D5 /* libRNFirebase.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -662,6 +673,14 @@
 			children = (
 				5BD0EC7D1FE0C9E40010DCC4 /* libRCTVideo.a */,
 				5BD0EC7F1FE0C9E40010DCC4 /* libRCTVideo.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BFB480C200981DE00EA44A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BFB4810200981DF00EA44A9 /* libRNFirebase.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -703,6 +722,7 @@
 				8969B07A43A1415EA369699D /* RCTVideo.xcodeproj */,
 				68E0C6EF3600451884BB9170 /* RCTYouTube.xcodeproj */,
 				2D0828824567426C82774891 /* RCTContacts.xcodeproj */,
+				ACD3265771CA4E22B722F882 /* RNFirebase.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -960,6 +980,10 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = 5BFB480C200981DE00EA44A9 /* Products */;
+					ProjectRef = ACD3265771CA4E22B722F882 /* RNFirebase.xcodeproj */;
 				},
 				{
 					ProductGroup = 5BD0EC761FE0C9E40010DCC4 /* Products */;
@@ -1222,6 +1246,13 @@
 			remoteRef = 5BD0EC811FE0C9E40010DCC4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		5BFB4810200981DF00EA44A9 /* libRNFirebase.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNFirebase.a;
+			remoteRef = 5BFB480F200981DF00EA44A9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1273,9 +1304,9 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				5B1B66791FF9FA4400DF8E64 /* GoogleService-Info.plist in Resources */,
 				E9598200AFD2412291503DCF /* Entypo.ttf in Resources */,
 				19BD3FC746E34218BAD1C06F /* EvilIcons.ttf in Resources */,
+				5BFB48122009824C00EA44A9 /* GoogleService-Info.plist in Resources */,
 				66B870E407364F78AE2C2BE3 /* FontAwesome.ttf in Resources */,
 				A76C7BAE8F3941A6836EE99C /* Foundation.ttf in Resources */,
 				FF7251D1DF0945329E888A04 /* Ionicons.ttf in Resources */,
@@ -1294,7 +1325,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
-				5B1B667A1FF9FA4400DF8E64 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1450,9 +1480,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SuperHero/Pods-SuperHero-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1609,12 +1648,14 @@
 					"$(SRCROOT)/../node_modules/react-native-video/ios",
 					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 					"$(SRCROOT)/../node_modules/react-native-contacts/ios/RCTContacts",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 				INFOPLIST_FILE = SuperHeroTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1643,12 +1684,14 @@
 					"$(SRCROOT)/../node_modules/react-native-video/ios",
 					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 					"$(SRCROOT)/../node_modules/react-native-contacts/ios/RCTContacts",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 				INFOPLIST_FILE = SuperHeroTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1678,6 +1721,7 @@
 					"$(SRCROOT)/../node_modules/react-native-video/ios",
 					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 					"$(SRCROOT)/../node_modules/react-native-contacts/ios/RCTContacts",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 				INFOPLIST_FILE = SuperHero/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1704,6 +1748,7 @@
 					"$(SRCROOT)/../node_modules/react-native-video/ios",
 					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 					"$(SRCROOT)/../node_modules/react-native-contacts/ios/RCTContacts",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 				INFOPLIST_FILE = SuperHero/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1737,11 +1782,13 @@
 					"$(SRCROOT)/../node_modules/react-native-video/ios",
 					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 					"$(SRCROOT)/../node_modules/react-native-contacts/ios/RCTContacts",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 				INFOPLIST_FILE = "SuperHero-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1780,11 +1827,13 @@
 					"$(SRCROOT)/../node_modules/react-native-video/ios",
 					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 					"$(SRCROOT)/../node_modules/react-native-contacts/ios/RCTContacts",
+					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 				);
 				INFOPLIST_FILE = "SuperHero-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1824,6 +1873,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.SuperHero-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1850,6 +1900,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",

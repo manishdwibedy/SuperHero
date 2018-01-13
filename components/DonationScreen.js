@@ -25,6 +25,8 @@ import { Container,
     H2
 } from 'native-base';
 import { NavigationActions } from 'react-navigation';
+import firebase from 'react-native-firebase';
+
 
 export default class DonationScreen extends Component<{}> {
     checkContactStatus(){
@@ -32,6 +34,24 @@ export default class DonationScreen extends Component<{}> {
     }
 
     do(){
+        // const userInfo = firebase.database().ref('users');
+        // userInfo.setItem()
+
+        // firebase.auth().signInAnonymously().then((user) => {
+        //     console.log('defaultApp user ->', user.toJSON());
+        // });
+
+        firebase.app().database().ref('users').push({
+            'a': 'a111',
+            'b': 'b111'
+        })
+        // signInAnonymously().then();
+        // firebase.auth().signInAnonymously()
+        //     .then(() => {
+        //         this.setState({
+        //             isAuthenticated: true,
+        //         });
+        //     });
         console.log('doing...');
     }
 
